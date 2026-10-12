@@ -1,0 +1,141 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Great Journeys · Oliver&#x27;s Projects</title>
+<meta name="description" content="Big trips, and how one degree can send you a hundred kilometres off course.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Atkinson+Hyperlegible:wght@400;700&family=Lilita+One&display=swap">
+<link rel="stylesheet" href="style.css">
+<link rel="icon" href="favicon.ico" sizes="any">
+<link rel="icon" type="image/png" href="favicon.png">
+<link rel="apple-touch-icon" href="apple-touch-icon.png">
+</head>
+<body><header class="topbar">
+  <a class="brand" href="index.html"><img class="brand-hat" src="favicon.png" alt="" width="34" height="34">Oliver's Projects</a>
+  <nav class="nav" aria-label="Main">
+    <a class="pill" href="about.html">About Oliver</a>
+    <a class="pill yt" href="https://www.youtube.com/@HamTechVibes" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M23.5 6.2a3 3 0 0 0-2.1-2.1C19.5 3.6 12 3.6 12 3.6s-7.5 0-9.4.5A3 3 0 0 0 .5 6.2 31 31 0 0 0 0 12a31 31 0 0 0 .5 5.8 3 3 0 0 0 2.1 2.1c1.9.5 9.4.5 9.4.5s7.5 0 9.4-.5a3 3 0 0 0 2.1-2.1A31 31 0 0 0 24 12a31 31 0 0 0-.5-5.8zM9.6 15.6V8.4l6.3 3.6-6.3 3.6z"/></svg>YouTube</a>
+    <a class="pill ig" href="https://www.instagram.com/hamtechvibes" target="_blank" rel="noopener"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M12 2.2c3.2 0 3.6 0 4.8.1 3.3.1 4.8 1.7 4.9 4.9.1 1.3.1 1.6.1 4.8s0 3.6-.1 4.8c-.1 3.2-1.7 4.8-4.9 4.9-1.3.1-1.6.1-4.8.1s-3.6 0-4.8-.1c-3.3-.1-4.8-1.7-4.9-4.9C2.2 15.6 2.2 15.2 2.2 12s0-3.6.1-4.8C2.4 3.9 3.9 2.4 7.2 2.3 8.4 2.2 8.8 2.2 12 2.2zM12 0C8.7 0 8.3 0 7.1.1 2.7.3.3 2.7.1 7.1 0 8.3 0 8.7 0 12s0 3.7.1 4.9c.2 4.4 2.6 6.8 7 7C8.3 24 8.7 24 12 24s3.7 0 4.9-.1c4.4-.2 6.8-2.6 7-7 .1-1.2.1-1.6.1-4.9s0-3.7-.1-4.9c-.2-4.4-2.6-6.8-7-7C15.7 0 15.3 0 12 0zm0 5.8a6.2 6.2 0 1 0 0 12.4 6.2 6.2 0 0 0 0-12.4zM12 16a4 4 0 1 1 0-8 4 4 0 0 1 0 8zm6.4-11.8a1.4 1.4 0 1 0 0 2.9 1.4 1.4 0 0 0 0-2.9z"/></svg>Instagram</a>
+  </nav>
+</header>
+<div style="--c: var(--t-journeys)">
+<section class="p-hero">
+  <div class="p-hero-inner">
+    <div>
+      <a class="back" href="index.html">← All projects</a>
+      <h1>Great Journeys</h1>
+      <p class="tagline">Big trips, and how one degree can send you a hundred kilometres off course.</p>
+    </div>
+    <svg viewBox="0 0 200 120" aria-hidden="true">
+<path d="M24 96 C60 96 50 30 100 40 S150 90 176 24" fill="none" stroke="#fff" stroke-width="5" stroke-dasharray="2 12" stroke-linecap="round"/>
+<circle cx="24" cy="96" r="9" fill="#fff"/>
+<path d="M176 6 C164 6 158 16 158 24 C158 36 176 52 176 52 C176 52 194 36 194 24 C194 16 188 6 176 6Z" fill="#fff"/><circle cx="176" cy="24" r="6" fill="#8a5cd6"/>
+<rect x="74" y="66" width="56" height="28" rx="8" fill="rgba(255,255,255,.35)"/><circle cx="86" cy="98" r="5" fill="#fff"/><circle cx="118" cy="98" r="5" fill="#fff"/>
+</svg>
+  </div>
+</section>
+<main class="content">
+<div class="block"><h2>The big one: Plymouth to New York</h2>
+<p>Sailing from Plymouth to New York is about <strong>5,340 km</strong> (2,880 nautical miles) by the shortest route across the globe. Out on the Atlantic there's nothing to aim at, so you steer by your compass and your sums. That's why a tiny mistake matters so much.</p></div>
+<div class="toy">
+  <div class="toy-head"><h2>The one-degree problem</h2><span class="big-number" id="gj-km">93 km</span></div>
+  <p class="toy-note">Drag the slider to steer off course. The number shows how far from New York you'd end up.</p>
+  <div class="row"><label for="gj-deg" class="toy-note">Steering error</label><input type="range" id="gj-deg" min="0" max="10" step="0.5" value="1"><span class="score" id="gj-lab">1°</span></div>
+  <canvas id="gj" width="700" height="280" aria-label="Diagram of a course from Plymouth to New York drifting off target"></canvas>
+  <p class="toy-note" id="gj-say"></p>
+</div>
+<div class="block"><h2>More journeys</h2>
+<p class="todo">your other favourite trips: where you went, how you got there, and the best bit of each.</p></div>
+<script>
+(function () {
+  var D = 5341, cv = document.getElementById('gj'), ctx = cv.getContext('2d'), W = cv.width, H = cv.height;
+  var accent = getComputedStyle(cv).getPropertyValue('--c').trim() || '#8a5cd6';
+  var deg = document.getElementById('gj-deg'), km = document.getElementById('gj-km'), lab = document.getElementById('gj-lab'), say = document.getElementById('gj-say');
+  function off(a) { return 2 * D * Math.sin(a * Math.PI / 360); }
+  function draw() {
+    var a = parseFloat(deg.value), miss = off(a);
+    km.textContent = Math.round(miss).toLocaleString('en-GB') + ' km';
+    lab.textContent = a + '°';
+    say.textContent = a === 0 ? 'Spot on: straight into New York harbour.' :
+      'That’s about ' + Math.round(miss / 1.852).toLocaleString('en-GB') + ' nautical miles off. ' +
+      (miss < 120 ? 'About as far as London to Guildford and back.' : miss < 500 ? 'You’d be hunting for the coast of another state.' : 'You might reach a different country altogether.');
+    ctx.fillStyle = '#d8ecf7'; ctx.fillRect(0, 0, W, H);
+    ctx.fillStyle = '#b9dcef'; for (var y = 30; y < H; y += 40) { ctx.fillRect(0, y, W, 2); }
+    var px = W - 60, py = H / 2, nx = 60, ny = H / 2;
+    var scale = (px - nx) / D, ang = a * Math.PI / 180 * 4; // exaggerated angle so small errors show
+    var ex = px - (px - nx) * Math.cos(ang), ey = py - (px - nx) * Math.sin(ang);
+    ctx.setLineDash([8, 8]); ctx.lineWidth = 3; ctx.strokeStyle = '#557';
+    ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(nx, ny); ctx.stroke(); ctx.setLineDash([]);
+    ctx.strokeStyle = accent; ctx.lineWidth = 4; ctx.beginPath(); ctx.moveTo(px, py); ctx.lineTo(ex, ey); ctx.stroke();
+    function dot(x, y, c, t, al) { ctx.fillStyle = c; ctx.beginPath(); ctx.arc(x, y, 9, 0, 7); ctx.fill(); ctx.fillStyle = '#1d1b24'; ctx.font = 'bold 16px sans-serif'; ctx.textAlign = al; ctx.fillText(t, x + (al === 'left' ? 14 : al === 'right' ? -14 : 0), y - 14); }
+    dot(px, py, '#1d1b24', 'Plymouth', 'right'); dot(nx, ny, '#1d1b24', 'New York', 'left');
+    if (a > 0) { dot(ex, ey, accent, 'You end up here', 'left'); }
+    ctx.fillStyle = '#557'; ctx.font = '13px sans-serif'; ctx.textAlign = 'right'; ctx.fillText('Angle drawn bigger so you can see it', W - 12, H - 12);
+  }
+  deg.addEventListener('input', draw); draw();
+})();
+</script>
+</main>
+</div>
+<section class="more">
+  <h2>More projects</h2>
+  <div class="more-row">
+<a href="explore-guildford.html" style="--c: var(--t-guildford)"><span class="mini"><img src="guildford-explorers-icon.jpg" alt="" loading="lazy"></span>Explore Guildford</a>
+<a href="biathlon.html" style="--c: var(--t-biathlon)"><span class="mini"><svg viewBox="0 0 200 120" aria-hidden="true">
+<circle cx="70" cy="58" r="40" fill="#fff"/><circle cx="70" cy="58" r="28" fill="rgba(0,0,0,.18)"/><circle cx="70" cy="58" r="16" fill="#fff"/><circle cx="70" cy="58" r="6" fill="rgba(0,0,0,.18)"/>
+<rect x="118" y="20" width="8" height="90" rx="4" transform="rotate(20 122 65)" fill="#fff"/><rect x="146" y="20" width="8" height="90" rx="4" transform="rotate(-20 150 65)" fill="#fff"/>
+<circle cx="150" cy="22" r="5" fill="rgba(255,255,255,.35)"/><circle cx="122" cy="22" r="5" fill="rgba(255,255,255,.35)"/>
+</svg></span>Biathlon</a>
+<a href="amateur-radio.html" style="--c: var(--t-radio)"><span class="mini"><svg viewBox="0 0 200 120" aria-hidden="true">
+<path d="M92 110 L100 30 L108 110Z" fill="#fff"/><path d="M94 80 H106 M95 64 H105 M97 48 H103" stroke="rgba(0,0,0,.18)" stroke-width="3"/>
+<circle cx="100" cy="28" r="7" fill="#fff"/>
+<path d="M78 14 Q64 28 78 42 M122 14 Q136 28 122 42" fill="none" stroke="#fff" stroke-width="5" stroke-linecap="round"/>
+<path d="M62 2 Q38 28 62 54 M138 2 Q162 28 138 54" fill="none" stroke="rgba(255,255,255,.35)" stroke-width="5" stroke-linecap="round"/>
+<rect x="40" y="96" width="120" height="14" rx="7" fill="rgba(255,255,255,.35)"/>
+</svg></span>Amateur Radio</a>
+<a href="fitness-ai.html" style="--c: var(--t-fitness)"><span class="mini"><svg viewBox="0 0 200 120" aria-hidden="true">
+<rect x="78" y="0" width="44" height="120" rx="14" fill="rgba(255,255,255,.35)"/>
+<rect x="64" y="22" width="72" height="76" rx="22" fill="#fff"/>
+<path d="M74 62 H88 L94 48 L102 76 L110 40 L116 62 H126" fill="none" stroke="#ff5a36" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"/>
+<circle cx="150" cy="30" r="7" fill="#fff"/><circle cx="166" cy="48" r="5" fill="rgba(255,255,255,.35)"/><circle cx="40" cy="80" r="6" fill="#fff"/>
+</svg></span>Fitness AI</a>
+<a href="flood-o-matic.html" style="--c: var(--t-flood)"><span class="mini"><svg viewBox="0 0 200 120" aria-hidden="true">
+<rect x="132" y="10" width="20" height="100" rx="4" fill="#fff"/>
+<path d="M132 30 H142 M132 50 H146 M132 70 H142 M132 90 H146" stroke="rgba(0,0,0,.18)" stroke-width="3"/>
+<path d="M0 72 Q20 62 40 72 T80 72 T120 72 T160 72 T200 72 V120 H0Z" fill="rgba(255,255,255,.35)"/>
+<path d="M0 86 Q20 76 40 86 T80 86 T120 86 T160 86 T200 86 V120 H0Z" fill="#fff"/>
+<path d="M60 20 Q60 40 52 44 Q44 40 44 30 Q48 26 60 20Z" fill="#fff"/><path d="M84 34 Q84 48 78 50 Q72 48 72 42 Q75 39 84 34Z" fill="rgba(255,255,255,.35)"/>
+</svg></span>Flood-o-matic</a>
+<a href="race-o-matic.html" style="--c: var(--t-race)"><span class="mini"><svg viewBox="0 0 200 120" aria-hidden="true">
+<circle cx="76" cy="66" r="42" fill="#fff"/><rect x="70" y="10" width="12" height="16" rx="3" fill="#fff"/>
+<circle cx="76" cy="66" r="34" fill="none" stroke="rgba(0,0,0,.15)" stroke-width="3"/>
+<path d="M76 66 L76 40 M76 66 L96 76" stroke="#22242b" stroke-width="5" stroke-linecap="round"/>
+<rect x="132" y="18" width="5" height="92" fill="#fff"/>
+<g fill="#fff"><rect x="137" y="18" width="12" height="10"/><rect x="161" y="18" width="12" height="10"/><rect x="149" y="28" width="12" height="10"/><rect x="173" y="28" width="12" height="10"/><rect x="137" y="38" width="12" height="10"/><rect x="161" y="38" width="12" height="10"/></g>
+<g fill="rgba(255,255,255,.35)"><rect x="149" y="18" width="12" height="10"/><rect x="173" y="18" width="12" height="10"/><rect x="137" y="28" width="12" height="10"/><rect x="161" y="28" width="12" height="10"/><rect x="149" y="38" width="12" height="10"/><rect x="173" y="38" width="12" height="10"/></g>
+</svg></span>Race-o-matic</a>
+<a href="activity-days.html" style="--c: var(--t-activity)"><span class="mini"><svg viewBox="0 0 200 120" aria-hidden="true">
+<rect x="46" y="20" width="108" height="92" rx="14" fill="#fff"/><rect x="46" y="20" width="108" height="24" rx="12" fill="rgba(255,255,255,.35)"/>
+<rect x="66" y="10" width="8" height="20" rx="4" fill="#fff"/><rect x="126" y="10" width="8" height="20" rx="4" fill="#fff"/>
+<path d="M100 54 L107 68 L122 70 L111 80 L114 95 L100 88 L86 95 L89 80 L78 70 L93 68Z" fill="#e9488f"/>
+<circle cx="24" cy="40" r="6" fill="#fff"/><circle cx="178" cy="86" r="7" fill="rgba(255,255,255,.35)"/>
+</svg></span>Activity Days</a>
+<a href="cats.html" style="--c: var(--t-cats)"><span class="mini"><svg viewBox="0 0 200 120" aria-hidden="true">
+<path d="M58 44 L66 6 L92 34Z" fill="#fff"/><path d="M142 44 L134 6 L108 34Z" fill="#fff"/>
+<ellipse cx="100" cy="66" rx="50" ry="44" fill="#fff"/>
+<ellipse cx="82" cy="60" rx="7" ry="10" fill="#22242b"/><ellipse cx="118" cy="60" rx="7" ry="10" fill="#22242b"/>
+<path d="M95 76 L105 76 L100 82Z" fill="#f07a2c"/>
+<path d="M100 82 Q94 90 88 86 M100 82 Q106 90 112 86" fill="none" stroke="#22242b" stroke-width="2.5" stroke-linecap="round"/>
+<path d="M40 72 H70 M42 82 H70 M130 72 H160 M130 82 H158" stroke="rgba(255,255,255,.35)" stroke-width="3" stroke-linecap="round"/>
+</svg></span>Cats</a>
+  </div>
+</section>
+<footer class="site">
+  <span>Oliver's Projects · 1odh.com</span>
+  <span><a href="index.html">All projects</a> · <a href="about.html">About Oliver</a></span>
+</footer>
+</body>
+</html>
